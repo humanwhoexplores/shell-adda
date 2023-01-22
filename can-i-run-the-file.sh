@@ -3,17 +3,17 @@
 
 filename=/etc/passwd
 
-echo "Checking if file can be written by me."
+echo "Checking if file can be run"
 
 if [ -f $filename ]
 then
     echo "File Exists"
-    if [ -w $filename ]
+    if [ -x $filename ]
     then
-        echo "file can be written"
+        echo "file can be executed"
         cat $filename
     else
-        echo "No write permission on file."
+        echo "No execute permission on file."
     fi 
 else
     echo "file does not exist"
