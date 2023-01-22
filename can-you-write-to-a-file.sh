@@ -10,10 +10,10 @@ then
     echo "File Exists"
     if [ -w $filename ]
     then
-        echo "file can be read"
+        echo "file can be written"
         cat $filename
     else
-        echo "No read permission on file."
+        echo "No write permission on file."
     fi 
 else
     echo "file does not exist"
